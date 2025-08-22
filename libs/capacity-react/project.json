@@ -1,0 +1,35 @@
+{
+  "name": "capacity-react",
+  "projectType": "library",
+  "sourceRoot": "libs/capacity-react/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/capacity-react",
+        "main": "libs/capacity-react/src/index.ts",
+        "tsConfig": "libs/capacity-react/tsconfig.json",
+        "assets": []
+      },
+      "dependsOn": ["^build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/capacity-react/**/*.ts",
+          "libs/capacity-react/**/*.tsx"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/capacity-react/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:lib", "scope:react", "platform:web"]
+}

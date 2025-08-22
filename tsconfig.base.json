@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@capacity/core": ["libs/capacity-core/src"],
+      "@capacity/core/*": ["libs/capacity-core/src/*"],
+      "@capacity/react": ["libs/capacity-react/src"],
+      "@capacity/react/*": ["libs/capacity-react/src/*"]
+    },
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "verbatimModuleSyntax": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "noEmit": true
+  },
+  "include": ["apps/**/*", "libs/**/*", "scripts/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "web",
+  "projectType": "application",
+  "sourceRoot": "apps/web/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {
+        "outputPath": "dist/apps/web",
+        "configFile": "apps/web/vite.config.ts"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "web:build",
+        "configFile": "apps/web/vite.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/web/**/*.ts",
+          "apps/web/**/*.tsx",
+          "apps/web/**/*.js",
+          "apps/web/**/*.jsx"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/web/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:app", "scope:web"]
+}

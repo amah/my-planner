@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --row-h: 32px;
+  --day-w: 26px;
+}
+
+/* Ensure proper row height for Gantt chart */
+.gantt-row {
+  height: var(--row-h);
+}
+
+/* Fix any potential layout issues */
+.gantt-container {
+  min-height: 0;
+  overflow: visible;
+}
+
+/* Ensure task bars are visible */
+.task-bar {
+  min-width: 2px;
+  background-color: rgb(59 130 246 / 0.8);
+  border-radius: 6px;
+}
+
+.task-bar:hover {
+  background-color: rgb(59 130 246);
+}
+/* Simple scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+*::-webkit-scrollbar { height: 8px; width: 8px; }
+*::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 6px; }

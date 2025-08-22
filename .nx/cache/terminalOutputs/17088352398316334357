@@ -1,0 +1,26 @@
+Compiling TypeScript files for project "capacity-react"...
+[1m[31m[96mlibs/capacity-react/src/state.ts[0m:[93m2[0m:[93m77[0m - [91merror[0m[90m TS6059: [0mFile '/Users/amah/Devs/projects/my-planner/libs/capacity-core/src/index.ts' is not under 'rootDir' '/Users/amah/Devs/projects/my-planner/libs/capacity-react'. 'rootDir' is expected to contain all source files.[39m[22m
+[1m[31m  The file is in the program because:[39m[22m
+[1m[31m    Imported via '@capacity/core' from file '/Users/amah/Devs/projects/my-planner/libs/capacity-react/src/state.ts'[39m[22m
+[1m[31m    Imported via '@capacity/core' from file '/Users/amah/Devs/projects/my-planner/libs/capacity-react/src/ui/Gantt.tsx'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { Plan, ISODate, expandPlanDays, fmt, addDays, diffDays, Task } from '@capacity/core';[39m[22m
+[1m[31m[7m [0m [91m                                                                            ~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mlibs/capacity-react/src/ui/Gantt.tsx[0m:[93m3[0m:[93m22[0m[39m[22m
+[1m[31m    [7m3[0m import { Task } from '@capacity/core';[39m[22m
+[1m[31m    [7m [0m [96m                     ~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    File is included via import here.[39m[22m
+[1m[31m[96mlibs/capacity-react/src/state.ts[0m:[93m2[0m:[93m77[0m - [91merror[0m[90m TS6307: [0mFile '/Users/amah/Devs/projects/my-planner/libs/capacity-core/src/index.ts' is not listed within the file list of project ''. Projects must list all files or use an 'include' pattern.[39m[22m
+[1m[31m  The file is in the program because:[39m[22m
+[1m[31m    Imported via '@capacity/core' from file '/Users/amah/Devs/projects/my-planner/libs/capacity-react/src/state.ts'[39m[22m
+[1m[31m    Imported via '@capacity/core' from file '/Users/amah/Devs/projects/my-planner/libs/capacity-react/src/ui/Gantt.tsx'[39m[22m
+[1m[31m[39m[22m
+[1m[31m[7m2[0m import { Plan, ISODate, expandPlanDays, fmt, addDays, diffDays, Task } from '@capacity/core';[39m[22m
+[1m[31m[7m [0m [91m                                                                            ~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m[39m[22m
+[1m[31m  [96mlibs/capacity-react/src/ui/Gantt.tsx[0m:[93m3[0m:[93m22[0m[39m[22m
+[1m[31m    [7m3[0m import { Task } from '@capacity/core';[39m[22m
+[1m[31m    [7m [0m [96m                     ~~~~~~~~~~~~~~~~[0m[39m[22m
+[1m[31m    File is included via import here.[39m[22m
+[1m[31m[39m[22m

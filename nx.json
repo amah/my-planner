@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/nx.json",
+  "npmScope": "nx-capacity-gantt",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "targetDefaults": {
+    "build": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "serve": {
+      "cache": false
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/react",
+      "options": {}
+    }
+  ]
+}

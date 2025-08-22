@@ -1,0 +1,33 @@
+{
+  "name": "capacity-core",
+  "projectType": "library",
+  "sourceRoot": "libs/capacity-core/src",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/capacity-core",
+        "main": "libs/capacity-core/src/index.ts",
+        "tsConfig": "libs/capacity-core/tsconfig.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/capacity-core/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/capacity-core/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:lib", "scope:core"]
+}

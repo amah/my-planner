@@ -1,0 +1,204 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.8.2",
+  "pathMappings": {
+    "@capacity/core": [
+      "libs/capacity-core/src"
+    ],
+    "@capacity/core/*": [
+      "libs/capacity-core/src/*"
+    ],
+    "@capacity/react": [
+      "libs/capacity-react/src"
+    ],
+    "@capacity/react/*": [
+      "libs/capacity-react/src/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/react",
+      "version": "^20.0.0",
+      "options": {}
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "jest.preset.js",
+        "hash": "10647718553499795105"
+      },
+      {
+        "file": "package.json",
+        "hash": "17361675630173542465"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "10509774052068950934"
+      },
+      {
+        "file": "nx.json",
+        "hash": "5675720789703842816"
+      },
+      {
+        "file": "tmp.txt",
+        "hash": "4152589264683599633"
+      },
+      {
+        "file": "docs/requirements.md",
+        "hash": "17186411782294078541"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "5759000181458268648"
+      },
+      {
+        "file": "tailwind.config.ts",
+        "hash": "5733928667312246721"
+      },
+      {
+        "file": "docs/implementation-plan.md",
+        "hash": "8478428281800367533"
+      },
+      {
+        "file": "pnpm-lock.yaml",
+        "hash": "10245789390099165289"
+      },
+      {
+        "file": "jest.setup.ts",
+        "hash": "4313664000435496398"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "15864586395204487977"
+      }
+    ],
+    "projectFileMap": {
+      "web": [
+        {
+          "file": "apps/web/index.html",
+          "hash": "16082157310527233602"
+        },
+        {
+          "file": "apps/web/jest.config.ts",
+          "hash": "15345204401903842369"
+        },
+        {
+          "file": "apps/web/postcss.config.js",
+          "hash": "11614694638577984839"
+        },
+        {
+          "file": "apps/web/project.json",
+          "hash": "6868432297910678931"
+        },
+        {
+          "file": "apps/web/src/app/app.tsx",
+          "hash": "5558512379553930714",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/demo/DemoPlanner.tsx",
+          "hash": "3538779634865490466",
+          "deps": [
+            "npm:react",
+            "capacity-react"
+          ]
+        },
+        {
+          "file": "apps/web/src/app/demo/mockData.ts",
+          "hash": "16233673286849754855",
+          "deps": [
+            "capacity-core"
+          ]
+        },
+        {
+          "file": "apps/web/src/main.tsx",
+          "hash": "9846591318781538068",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/web/src/styles.css",
+          "hash": "14134027149230794184"
+        },
+        {
+          "file": "apps/web/tsconfig.json",
+          "hash": "12183868900396259306"
+        },
+        {
+          "file": "apps/web/vite.config.ts",
+          "hash": "15986524438475606739",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:vite-tsconfig-paths"
+          ]
+        }
+      ],
+      "capacity-react": [
+        {
+          "file": "libs/capacity-react/jest.config.ts",
+          "hash": "17664718296197304554"
+        },
+        {
+          "file": "libs/capacity-react/project.json",
+          "hash": "2263298420922747180"
+        },
+        {
+          "file": "libs/capacity-react/src/index.ts",
+          "hash": "16883723089161494680"
+        },
+        {
+          "file": "libs/capacity-react/src/state.ts",
+          "hash": "11743135172937149447",
+          "deps": [
+            "npm:zustand",
+            "capacity-core"
+          ]
+        },
+        {
+          "file": "libs/capacity-react/src/ui/Gantt.tsx",
+          "hash": "5162614952351218916",
+          "deps": [
+            "npm:react",
+            "capacity-core"
+          ]
+        },
+        {
+          "file": "libs/capacity-react/src/ui/TimelineHeader.tsx",
+          "hash": "10849306612154348482",
+          "deps": [
+            "npm:react",
+            "npm:date-fns"
+          ]
+        },
+        {
+          "file": "libs/capacity-react/tsconfig.json",
+          "hash": "1950645793341060377"
+        }
+      ],
+      "capacity-core": [
+        {
+          "file": "libs/capacity-core/jest.config.ts",
+          "hash": "12800924166142347358"
+        },
+        {
+          "file": "libs/capacity-core/project.json",
+          "hash": "3985434655731525008"
+        },
+        {
+          "file": "libs/capacity-core/src/index.ts",
+          "hash": "7449912717316752945"
+        },
+        {
+          "file": "libs/capacity-core/tsconfig.json",
+          "hash": "1950645793341060377"
+        }
+      ]
+    }
+  }
+}
