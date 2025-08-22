@@ -45,9 +45,9 @@ export type Plan = {
 };
 
 // ---- Date utils ----
-const d = (s: ISODate) => new Date(s + 'T00:00:00');
+const d = (s: ISODate) => new Date(s + 'T00:00:00Z');
 export const fmt = (dt: Date) => dt.toISOString().slice(0,10);
-export const addDays = (dt: Date, n: number) => { const t = new Date(dt); t.setDate(t.getDate()+n); return t; };
+export const addDays = (dt: Date, n: number) => { const t = new Date(dt); t.setUTCDate(t.getUTCDate()+n); return t; };
 export const diffDays = (a: ISODate, b: ISODate) => Math.round((d(b).getTime()-d(a).getTime())/86400000);
 export const clampRange = (date: ISODate, start: ISODate, end: ISODate) => (date >= start && date < end);
 

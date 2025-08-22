@@ -44,7 +44,7 @@ function useDragLogic() {
 
       // Desired whole-day delta since drag began (no 1/2-day deadzone)
       const raw = (e.clientX - drag.startX) / ui.dayWidth;
-      const desiredDays = raw >= 0 ? Math.floor(raw) : Math.ceil(raw);
+      const desiredDays = Math.round(raw);
 
       // What we still need to apply on this tick
       let step = desiredDays - drag.appliedDays;
@@ -55,6 +55,8 @@ function useDragLogic() {
         const maxRight = daysBetween(task.end, plan.config.planEnd);           // ≥ 0
         const maxLeft  = -daysBetween(plan.config.planStart, task.start);      // ≤ 0
         const clamped  = Math.max(Math.min(step, maxRight), maxLeft);
+        
+        
         if (clamped !== 0) {
           moveTaskByDays(task.id, clamped);
           setDrag({ ...drag, appliedDays: drag.appliedDays + clamped });

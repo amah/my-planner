@@ -3,5 +3,6 @@ dist
 .tmp
 .cache
 .vite
+.nx/
 .idea
 .DS_Store

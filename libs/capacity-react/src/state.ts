@@ -45,8 +45,8 @@ export const usePlannerState = create<PlannerState>((set, get) => ({
   moveTaskByDays: (taskId, deltaDays) => set((s) => {
     if (!s.plan || deltaDays === 0) return {};
     const tasks = updateTask(s.plan.tasks, taskId, (t) => {
-      const ns = fmt(addDays(new Date(t.start + 'T00:00:00'), deltaDays));
-      const ne = fmt(addDays(new Date(t.end + 'T00:00:00'), deltaDays));
+      const ns = fmt(addDays(new Date(t.start + 'T00:00:00Z'), deltaDays));
+      const ne = fmt(addDays(new Date(t.end + 'T00:00:00Z'), deltaDays));
       t.start = ns; t.end = ne;
     });
     return { plan: { ...s.plan, tasks } };
@@ -55,11 +55,11 @@ export const usePlannerState = create<PlannerState>((set, get) => ({
     if (!s.plan || deltaDays === 0) return {};
     const tasks = updateTask(s.plan.tasks, taskId, (t) => {
       if (edge === 'start') {
-        const nd = fmt(addDays(new Date(t.start + 'T00:00:00'), deltaDays));
+        const nd = fmt(addDays(new Date(t.start + 'T00:00:00Z'), deltaDays));
         // Prevent inverting
         if (diffDays(nd, t.end) > 0) t.start = nd;
       } else {
-        const nd = fmt(addDays(new Date(t.end + 'T00:00:00'), deltaDays));
+        const nd = fmt(addDays(new Date(t.end + 'T00:00:00Z'), deltaDays));
         if (diffDays(t.start, nd) > 0) t.end = nd;
       }
     });
