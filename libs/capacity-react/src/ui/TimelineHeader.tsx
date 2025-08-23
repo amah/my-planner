@@ -5,6 +5,7 @@ import { format } from 'date-fns';
 export function TimelineHeader() {
   const { days } = usePlannerState();
   const ui = usePlannerState((s) => s.ui);
+  const headerRef = React.useRef<HTMLDivElement>(null);
 
   // Group days by month
   const months: { key: string; startIso: string; count: number }[] = [];
@@ -25,10 +26,12 @@ export function TimelineHeader() {
     return px < 60 ? format(dt, 'MMM') : format(dt, 'MMM yyyy');
   };
 
+  // Scroll synchronization temporarily disabled to prevent infinite loop
+
   return (
-    <div className="overflow-x-auto border-b">
-      <div className="min-w-full">
-        <div className="sticky left-0 bg-white z-10 flex flex-col">
+    <div ref={headerRef} className="overflow-x-auto border-b">
+      <div style={{ minWidth: `calc(256px + ${days.length * ui.dayWidth}px)` }}>
+        <div className="flex flex-col">
           {/* Row 1: months */}
           <div className="flex border-b border-neutral-200">
             <div className="w-64 shrink-0 border-r p-2 text-sm font-medium">
@@ -42,7 +45,7 @@ export function TimelineHeader() {
                     key={m.key}
                     className="text-xs text-center border-r bg-neutral-50 whitespace-nowrap overflow-hidden text-ellipsis leading-5"
                     style={{ width: w }}
-                    title={m.label}
+                    title={monthLabel(m.startIso, w)}
                   >
                     {monthLabel(m.startIso, w)}
                   </div>

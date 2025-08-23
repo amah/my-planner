@@ -1,6 +1,6 @@
 import React from 'react';
 import { demoPlan } from './mockData';
-import { Gantt, usePlannerState, TimelineHeader } from '@capacity/react';
+import { Gantt, usePlannerState } from '@capacity/react';
 
 export function DemoPlanner() {
   const store = usePlannerState((s) => s);
@@ -23,7 +23,6 @@ export function DemoPlanner() {
           </div>
         </div>
       </div>
-      <TimelineHeader />
       <Gantt />
     </div>
   );
